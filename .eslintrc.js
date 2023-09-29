@@ -2,7 +2,7 @@ const noRestrictedImportsNativePaths = [
   {
     name: 'react-native',
     importNames: ['View', 'Text', 'TouchableOpacity'],
-    message: 'Please use \'react-native-ui-lib\'',
+    message: "Please use 'react-native-ui-lib'",
   },
 ];
 

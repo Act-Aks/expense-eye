@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { StyleSheet } from 'react-native';
+import { FadeIn } from 'react-native-reanimated';
 import { Colors, Gradient, Text, View } from 'react-native-ui-lib';
 
-import { Input } from '@components/Input';
-import { Screen } from '@components/Screen';
+import { Input, Screen } from '@components';
 import { validateEmail, validatePassword } from '@utils';
 
 import LoginStyles from './Login.style';
@@ -18,7 +18,12 @@ export const Login: React.FC = () => {
   const onChangePassword = (value: string) => setPassword(value);
 
   return (
-    <Screen center useSafeArea style={LoginStyles.screen}>
+    <Screen
+      reanimated
+      entering={FadeIn}
+      center
+      useSafeArea
+      style={LoginStyles.screen}>
       <Gradient
         color={Colors.violet50}
         numberOfSteps={50}
@@ -27,7 +32,7 @@ export const Login: React.FC = () => {
       <Text text50 color={Colors.violet10} style={LoginStyles.title}>
         {'Login'}
       </Text>
-      <View center renderDelay={2000} style={LoginStyles.inputContainer}>
+      <View center style={LoginStyles.inputContainer}>
         <Input
           value={email}
           onChangeText={onChangeEmail}

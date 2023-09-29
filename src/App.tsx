@@ -3,16 +3,19 @@ import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { ThemeProvider } from '@contexts/theme/themeContext';
-import { Login } from '@screens';
+import AuthNavigator from '@infrastructure/navigation/AuthNavigator';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <NavigationContainer>
       <ThemeProvider>
-        <Login />
-        <StatusBar style="auto" />
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <AuthNavigator />
+          <StatusBar style="auto" />
+        </GestureHandlerRootView>
       </ThemeProvider>
-    </GestureHandlerRootView>
+    </NavigationContainer>
   );
 }
 

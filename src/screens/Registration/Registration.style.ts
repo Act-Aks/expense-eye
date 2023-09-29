@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
 import { Colors } from 'react-native-ui-lib';
 
-const LoginStyles = StyleSheet.create({
+const RegistrationStyles = StyleSheet.create({
   screen: {
     gap: 16,
+    backgroundColor: Colors.violet70,
   },
   inputContainer: {
     width: '100%',
@@ -19,6 +20,17 @@ const LoginStyles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 10,
   },
+  buttonStyle: {
+    shadowColor: Colors.blue10,
+    shadowOffset: { width: 5, height: 5 },
+    shadowRadius: 20,
+    elevation: 8,
+    height: 50,
+    width: '85%',
+    backgroundColor: Colors.blue1,
+    borderRadius: 24,
+    padding: 1,
+  },
 });
 
-export default LoginStyles;
+export default RegistrationStyles;

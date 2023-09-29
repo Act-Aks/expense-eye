@@ -1,18 +1,14 @@
 import { useState } from 'react';
 import { StyleSheet } from 'react-native';
-import { FadeIn } from 'react-native-reanimated';
-import { Colors, Gradient, Text, View } from 'react-native-ui-lib';
+import { SlideInRight } from 'react-native-reanimated';
+import { Button, Colors, Gradient, Text, View } from 'react-native-ui-lib';
 
 import { Input, Screen } from '@components';
 import { validateEmail, validatePassword } from '@utils';
 
-import LoginStyles from './Login.style';
+import RegistrationStyles from './Registration.style';
 
-interface LoginProps {
-  navigation: RootNavigationProp<'Login'>;
-}
-
-export const Login = ({ navigation }: LoginProps) => {
+export const Registration = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isValidEmail, setIsValidEmail] = useState(false);
@@ -20,26 +16,23 @@ export const Login = ({ navigation }: LoginProps) => {
 
   const onChangeEmail = (value: string) => setEmail(value);
   const onChangePassword = (value: string) => setPassword(value);
-  const goToRegistration = () => {
-    navigation.navigate('Registration');
-  };
 
   return (
     <Screen
       reanimated
-      entering={FadeIn}
+      entering={SlideInRight}
       center
       useSafeArea
-      style={LoginStyles.screen}>
+      style={RegistrationStyles.screen}>
       <Gradient
-        color={Colors.violet50}
+        color={Colors.orange50}
         numberOfSteps={50}
         style={StyleSheet.absoluteFill}
       />
-      <Text text50 color={Colors.violet10} style={LoginStyles.title}>
-        {'Login'}
+      <Text text50 color={Colors.orange10} style={RegistrationStyles.title}>
+        {'Create New Account'}
       </Text>
-      <View center style={LoginStyles.inputContainer}>
+      <View center marginB-16 style={RegistrationStyles.inputContainer}>
         <Input
           value={email}
           onChangeText={onChangeEmail}
@@ -57,18 +50,14 @@ export const Login = ({ navigation }: LoginProps) => {
           }
         />
       </View>
-      <Text caption center color={Colors.orange1} style={LoginStyles.title}>
-        {'Do not have an account? '}
-        <Text
-          subTitle
-          underline
-          center
-          onPress={goToRegistration}
-          color={Colors.violet1}
-          style={LoginStyles.subTitle}>
-          {'Register'}
-        </Text>
-      </Text>
+      <View style={RegistrationStyles.buttonStyle}>
+        <Button
+          flex
+          buttonLabel
+          label={'Register'}
+          backgroundColor={Colors.violet40}
+        />
+      </View>
     </Screen>
   );
 };

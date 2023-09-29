@@ -15,6 +15,7 @@ const Typographies: Dictionary<Record<string, unknown>> = {
   title: { fontSize: 18, fontWeight: '600' },
   subTitle: { fontSize: 16, fontWeight: '500' },
   caption: { fontSize: 14, fontWeight: '400' },
+  buttonLabel: { fontSize: 18, fontWeight: '700' },
 };
 
 const ThemeColors: Dictionary<string> = {

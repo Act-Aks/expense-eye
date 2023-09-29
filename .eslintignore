@@ -6,6 +6,8 @@ assets
 .prettierignore
 .prettierrc
 
+.eslintrc.js
+
 yarn.lock
 *.lock
 .husky/

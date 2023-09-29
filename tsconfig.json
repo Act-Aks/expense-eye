@@ -1,11 +1,19 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
+    "alwaysStrict": true,
     "baseUrl": ".",
+    "declaration": true,
+    "importHelpers": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "paths": {
-      "@*": ["src/*"],
-      "@components/*": ["src/components/*"]
-    }
-  }
+      "@*": ["src/*"]
+    },
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "strict": true,
+    "types": ["node"]
+  },
+  "include": ["src", "typings"]
 }

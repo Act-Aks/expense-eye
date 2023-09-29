@@ -2,6 +2,7 @@ node_modules/
 .expo/
 assets/
 .husky/
+.vscode/
 
 # Lint
 .eslintignore

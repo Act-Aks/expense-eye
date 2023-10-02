@@ -4,7 +4,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { AuthenticationProvider } from '@contexts/auth/authContext';
 import { ThemeProvider } from '@contexts/theme/themeContext';
-import AuthNavigator from '@infrastructure/navigation/AuthNavigator';
+import { AppNavigator } from '@infrastructure/navigation/AppNavigator';
 import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
       <ThemeProvider>
         <GestureHandlerRootView style={{ flex: 1 }}>
           <AuthenticationProvider>
-            <AuthNavigator />
+            <AppNavigator />
           </AuthenticationProvider>
           <StatusBar style="auto" />
         </GestureHandlerRootView>

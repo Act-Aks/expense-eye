@@ -3,7 +3,7 @@ import { Login, Registration } from '@screens';
 
 const AuthStack = createNativeStackNavigator<AuthStackParamsList>();
 
-const AuthNavigator = () => {
+export const AuthNavigator: React.FC = () => {
   return (
     <AuthStack.Navigator screenOptions={{ animation: 'slide_from_right' }}>
       <AuthStack.Screen
@@ -15,5 +15,3 @@ const AuthNavigator = () => {
     </AuthStack.Navigator>
   );
 };
-
-export default AuthNavigator;

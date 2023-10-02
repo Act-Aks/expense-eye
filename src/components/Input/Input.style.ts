@@ -30,6 +30,9 @@ const InputStyles = StyleSheet.create({
     borderBottomWidth: 2,
     borderBottomColor: Colors.violet30,
   },
+  disabled: {
+    backgroundColor: Colors.grey40,
+  },
 });
 
 export default InputStyles;

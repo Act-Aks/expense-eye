@@ -9,22 +9,8 @@ import {
   setDoc,
 } from '@configs/firebase';
 
+import { AuthContext } from './authContext.type';
 import { loginRequest, registrationRequest } from './authService';
-
-type AuthContext = {
-  isAuthenticated: boolean;
-  isLoading: boolean;
-  error: string | undefined;
-  onLogin: (email: string, password: string) => void;
-  onRegister: (
-    email: string,
-    password: string,
-    repeatedPassword: string,
-    userName: string,
-  ) => void;
-  onLogout: () => void;
-  user: User | null;
-};
 
 const AuthenticationContext = createContext<AuthContext | null>(null);
 

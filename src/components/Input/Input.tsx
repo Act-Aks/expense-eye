@@ -11,6 +11,7 @@ const Input: React.FC<InputProps> = ({
   headIcon,
   tailIcon,
   textContentType,
+  readonly,
   ...props
 }) => {
   const [value, setValue] = useState(inputValue ?? '');
@@ -21,7 +22,8 @@ const Input: React.FC<InputProps> = ({
   };
 
   return (
-    <View style={InputStyles.inputContainer}>
+    <View
+      style={[InputStyles.inputContainer, readonly && InputStyles.disabled]}>
       {headIcon && <View center>{headIcon}</View>}
       <TextField
         containerStyle={InputStyles.containerStyle}
@@ -44,6 +46,7 @@ const Input: React.FC<InputProps> = ({
             tintColor={Colors.violet10}
           />
         }
+        readonly={readonly}
         {...props}
       />
       {tailIcon && <View center>{tailIcon}</View>}

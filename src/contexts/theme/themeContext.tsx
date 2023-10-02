@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren } from 'react';
+import { createContext } from 'react';
 import { Colors, Typography } from 'react-native-ui-lib';
 
 import { LocalScheme, ThemeColors, Typographies } from '@infrastructure/themes';

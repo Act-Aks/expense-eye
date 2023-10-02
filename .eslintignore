@@ -8,6 +8,8 @@ assets
 
 .eslintrc.js
 
+.env.local
+.env
 yarn.lock
 *.lock
 .husky/

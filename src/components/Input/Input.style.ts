@@ -7,7 +7,10 @@ const InputStyles = StyleSheet.create({
     fontWeight: '500',
     color: Colors.violet40,
   },
-  containerStyle: {
+  inputContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: Colors.violet70,
     borderRadius: 8,
     width: '100%',
@@ -17,6 +20,10 @@ const InputStyles = StyleSheet.create({
     elevation: 5,
     shadowOpacity: 1,
     shadowRadius: 8,
+    gap: 8,
+  },
+  containerStyle: {
+    flex: 1,
     paddingBottom: 8,
   },
   fieldStyle: {

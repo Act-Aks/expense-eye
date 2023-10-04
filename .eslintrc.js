@@ -60,6 +60,8 @@ module.exports = {
     'react/prop-types': 'off',
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    'jsx-quotes': ['error', 'prefer-double'],
+    'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
     '@typescript-eslint/no-empty-interface': [
       'error',
       {

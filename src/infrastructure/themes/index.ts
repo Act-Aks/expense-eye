@@ -2,7 +2,7 @@ import { Colors, Schemes } from 'react-native-ui-lib';
 
 const LocalScheme: Schemes = {
   light: {
-    screenBG: Colors.$backgroundDefault,
+    screenBG: Colors.grey70,
     textColor: Colors.violet10,
   },
   dark: {
